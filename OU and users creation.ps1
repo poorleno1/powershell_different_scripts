@@ -5,10 +5,10 @@ $new = "Groups"
 #Creating OUs in AD
 
 New-OU $new $root
-New-OU 'Common' 'OU=Groups,DC=corp,DC=contoso,DC=com'
-New-OU 'MARKET_IRL_Common' 'OU=Common,OU=Groups,DC=corp,DC=contoso,DC=com'
-New-OU 'MARKET_IRL_Org' 'OU=Common,OU=Groups,DC=corp,DC=contoso,DC=com'
-New-OU 'MARKET_IRL_Dept' 'OU=Common,OU=Groups,DC=corp,DC=contoso,DC=com'
+New-OU 'Common' "OU=Groups,$root"
+New-OU 'MARKET_IRL_Common' "OU=Common,OU=Groups,$root"
+New-OU 'MARKET_IRL_Org' "OU=Common,OU=Groups,$root"
+New-OU 'MARKET_IRL_Dept' "OU=Common,OU=Groups,$root"
 
 #Creating groups
 
